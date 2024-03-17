@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            height: 50px;
+            width: 100%;
+            display: flex;
+        }
+        .search {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+        }
+        .search h2 {
+            line-height: 50px;
+            color: yellow;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0 12px;
+        }
+        .search span {
+            line-height: 50px;
+            margin-right: 12px;
+        }
+        .option {
+            width: 60%;
+            background-color: yellow;
+            text-align: center;
+        }
+        .op-list {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            line-height: 50px;
+        }
+        .op-list li {
+            width: 100%;
+            height: 100%;
+        }
+        .op-list li:hover {
+            background-color: white;
+            cursor: pointer;
+        }
+        .op-list li a {
+            text-decoration: none;
+            color: black;
+        }
+        .content {
+            width: 100%;
+            display: flex;
+        }
+        .menu {
+            width: 250px;
+            background-color: whitesmoke;
+            height: 270px;
+        }
+        .category {
+            height: 50px;
+            background-color: rgb(88, 159, 252);
+            text-align: center;
+        }
+        .category h3 {
+            line-height: 50px;
+        }
+        .list {
+            list-style: none;
+        }
+        .list-item {
+            padding: 4px 12px;
+            border-bottom: 1px dotted gray;
+        }
+        .list-item a {
+            text-decoration: none;
+            color: black;
+        }
+        .list-item:hover > a{
+            color: red;
+        }
+        .menu1:hover .menu2 {
+            display: block;
+        }
+        .menu1 {
+            position: relative;
+        }
+        .menu2 {
+            position: absolute;
+            width:250px;
+			left: 250px;
+            display: none;
+			top: 0;
+            background-color: whitesmoke;
+        }
+        .menu2 {
+            list-style: none;
+        }
+        .menu2 li {
+            padding: 4px 12px;
+            border-bottom: 1px dotted gray;
+        }
+        .sale {
+            width: calc(100% - 250px);
+            margin: 0 4px;
+        }
+        .status {
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(226, 221, 221);
+        }
+        .status a {
+            margin-left: 8px;
+            text-decoration: none;
+            color: black;
+            line-height: 50px;
+            border-bottom: 2px solid rgb(88, 159, 252);
+        }
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .w-pro {
+            width: 25%;
+            border: 1px solid rgb(211, 206, 206);
+        }
+        .w-pro:hover {
+            cursor: pointer;
+        }
+        .pro-img {
+            text-align: center;
+        }
+        img {
+            margin-top: 8px;
+            width: 80%;
+            height: 80%;
+        }
+        .pro-name {
+            padding: 8px 12px;
+        }
+        .spe {
+            display: flex;
+        }
+        .pro-price {
+            padding: 8px 12px;
+            font-weight: bolder;
+            color: red;
+        }
+        .old-price {
+            display: flex;
+            padding: 8px 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
+        .discount {
+            padding: 2px;
+            color: white;
+            background-color: rgb(148, 238, 12);
+            margin-top: 8px;
+        }
+        .choose {
+            display: flex;
+        }
+        .choose p {
+            line-height: 50px;
+            padding-right: 4px;
+        }
+        .choose span {
+            line-height: 50px;
+        }
+        select {
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="search">
+            <h2><i>thegioididong</i></h2>
+            <span>
+                <input type="text" placeholder="Bạn tìm gì...">
+            </span>
+        </div>
+        <div class="option">
+            <ul class="op-list">
+                <li><a href="">Điện thoại</a></li>
+                <li><a href="">Tablet</a></li>
+                <li><a href="">Laptop</a></li>
+                <li><a href="">Phụ kiện</a></li>
+                <li><a href="">Đồng hồ</a></li>
+                <li><a href="">Cũ giá rẻ</a></li>
+                <li><a href="">Công nghệ</a></li>
+                <li><a href="">Hỏi đáp</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="menu">
+            <div class="category">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+            </div>
+            <ul class="list">
+                <li class="list-item"><a href="">Khuyến mại</a></li>
+                <li class="list-item"><a href="">Điện thoại</a></li>
+                <li class="list-item"><a href="">Máy tính bảng</a></li>
+                <li class="list-item menu1">
+                    <a href="">Máy tính Apple</a>
+                    <ul class="menu2">
+                        <li><a href="">Macbook New 12inch...</a></li>
+                        <li><a href="">Macbook Pro Retina 2...</a></li>
+                        <li><a href="">Macbook Air 2017</a></li>
+                        <li><a href="">iMac 2017</a></li>
+                        <li><a href="">Macbook Pro Retina 2...</a></li>
+                    </ul>
+                </li>
+                <li class="list-item"><a href="">Máy laptop cũ</a></li>
+                <li class="list-item"><a href="">Loa chính hãng JBL</a></li>
+                <li class="list-item"><a href="">Máy đọc sách - Kindle...</a></li>
+                <li class="list-item"><a href="">Ipad</a></li>
+            </ul>
+        </div>
+        <div class="sale">
+            <div class="status">
+                <a href="">MÁY LAPTOP CŨ</a>
+                <div class="choose">
+                    <p>Sắp xếp theo: </p>
+                    <span>
+                        <select name="sort" id="">
+                            <option value="Mới nhất trước">Mới nhất trước</option>
+                            <option value="Giá tăng đần">Giá tăng đần</option>
+                            <option value="Giá tăng đần">Giá tăng đần</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="product">
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./ipad_pro_2018_2_zzui.jpg" alt=""></div>
+                    <div class="pro-name"><p>The New Macbook 12inch Gray - 2015inch - Máy đã</p></div>
+                    <div class="pro-price">17,500,000đ</div>
+                </div>
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./ipad_pro_2018_2_zzui.jpg" alt=""></div>
+                    <div class="pro-name"><p>MacBook Pro 2011 - MC724 / 13'' / Core i7 / Ram 8gb/</p></div>
+                    <div class="spe">
+                        <div class="old-price">12,800,000đ</div>
+                        <div class="discount">-10%</div>
+                    </div>
+                    <div class="pro-price">11,400,000đ</div>
+                </div>
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./ipad_pro_2018_2_zzui.jpg" alt=""></div>
+                    <div class="pro-name"><p>The New Macbook 12inch Gray - 2015inch - Máy đã</p></div>
+                    <div class="spe">
+                        <div class="old-price">34,900,000đ</div>
+                        <div class="discount">-9%</div>
+                    </div>
+                    <div class="pro-price">31,500,000đ</div>
+                </div>
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./tai-ve-hinh-nen-macos-chat-luong.jpg" alt=""></div>
+                    <div class="pro-name"><p>The New Macbook 12inch Gray - 2015inch - Máy đã</p></div>
+                    <div class="pro-price">18,500,000đ</div>
+                </div>
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./ipad_pro_2018_2_zzui.jpg" alt=""></div>
+                    <div class="pro-name"><p>The New Macbook 12inch Gray - 2015inch - Máy đã</p></div>
+                    <div class="pro-price">18,500,000đ</div>
+                </div>
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./ipad_pro_2018_2_zzui.jpg" alt=""></div>
+                    <div class="pro-name"><p>The New Macbook 12inch Gray - 2015inch - Máy đã</p></div>
+                    <div class="pro-price">18,500,000đ</div>
+                </div>
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./ipad_pro_2018_2_zzui.jpg" alt=""></div>
+                    <div class="pro-name"><p>The New Macbook 12inch Gray - 2015inch - Máy đã</p></div>
+                    <div class="pro-price">18,500,000đ</div>
+                </div>
+                <div class="w-pro">
+                    <div class="pro-img"><img src="./ipad_pro_2018_2_zzui.jpg" alt=""></div>
+                    <div class="pro-name"><p>The New Macbook 12inch Gray - 2015inch - Máy đã</p></div>
+                    <div class="pro-price">18,500,000đ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
